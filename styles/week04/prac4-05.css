@@ -1,0 +1,19 @@
+.main {
+    background-color: skyblue;
+}
+
+#center {
+    text-align: center;
+}
+
+#center > strong {
+    background-color: yellow;
+}
+
+div.indent > p {
+    text-indent: 3em;
+}
+
+div.indent > p > strong {
+    color: red;
+}

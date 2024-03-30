@@ -1,0 +1,9 @@
+h1 {
+    text-align: center;
+    text-shadow: 3px 3px darkgray;
+    color: yellow;
+}
+
+img:hover {
+    box-shadow: 0 0 15px gray;
+}

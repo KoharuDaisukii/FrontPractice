@@ -1,0 +1,13 @@
+#card {
+    float: right;
+    width: 312px;
+    height: 442px;
+    background-image: url("../../media/week04/back.png");
+}
+
+#card:hover {
+    width: 320px;
+    height: 400px;
+    background-size: cover;
+    background-image: url("../../media/week04/spade-7.png");
+}
