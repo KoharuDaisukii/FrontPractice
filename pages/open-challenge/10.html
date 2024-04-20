@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>눈 내리는 샤갈의 마을</title>
+        <link rel="stylesheet" href="10.css" type="text/css" />
+    </head>
+    <body onload="startSnow()">
+        <script>
+            let snowTopArray = new Array(30);
+
+            function fallingSnow(snow, snowIndex) {
+                snowTopArray[snowIndex] += Math.random() * 10 + 1;
+                snow.style.top = snowTopArray[snowIndex] + "px";
+            }
+
+            function makeSnow(snowIndex) {
+                let snow = document.createElement("div");
+                snow.style.color = "white";
+                snow.style.fontSize = "30px";
+                snow.style.position = "absolute";
+                snow.style.left = Math.random() * screen.availWidth + "px";
+                snowTopArray[snowIndex] = Math.random() * screen.availHeight;
+                snow.style.top = snowTopArray[snowIndex] + "px";
+                snow.innerHTML = "*";
+                document.body.appendChild(snow);
+
+                setInterval(
+                    () => (
+                        fallingSnow(snow, snowIndex),
+                        refreshSnow(snow, snowIndex)
+                    ),
+                    Math.random() * 100 + 100
+                );
+            }
+
+            function startSnow() {
+                for (let i = 0; i < 50; i++) {
+                    makeSnow(i);
+                }
+            }
+
+            function refreshSnow(snow, snowIndex) {
+                if (snowTopArray[snowIndex] > screen.availHeight) {
+                    snowTopArray[snowIndex] = -5;
+                    snow.style.left = Math.random() * screen.availWidth + "px";
+                }
+            }
+        </script>
+    </body>
+</html>

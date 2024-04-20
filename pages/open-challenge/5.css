@@ -1,0 +1,33 @@
+body {
+    margin: 0 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    background-color: yellow;
+    display: inline-block;  
+}
+
+div#left {
+    margin: 0px;
+    display: flex;
+}
+
+nav {
+    width: 200px;
+    background-color: orange;
+}
+
+section {
+    display: block;
+    background-color: skyblue;
+}
+
+footer {
+    background-color: purple;
+    display: inline-block;
+    width: 100%;
+}
